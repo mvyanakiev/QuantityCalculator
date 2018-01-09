@@ -3,3 +3,5 @@ node_modules/*
 
 # exception to the rule
 !node_modules/gitkeep.txt
+views/.DS_Store
+.DS_Store
