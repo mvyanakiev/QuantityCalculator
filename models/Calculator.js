@@ -27,7 +27,7 @@ function Calculator(leftOperand, operator, rightOperand) {
                 result = Math.sqrt(this.leftOperand);
                 break;
 
-            case "pow":
+            case "pow": // вдигане на степен
                 result = Math.pow(this.leftOperand, this.rightOperand);
                 break;
         }
