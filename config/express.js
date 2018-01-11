@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const hbsHelpers = require('../helpers/handlebarsHelpers');
 
 
+
 module.exports = (app, config) => {
     // View engine setup.
     app.set('views', path.join(config.rootFolder, '/views'));
@@ -16,7 +17,15 @@ module.exports = (app, config) => {
 
     // This makes the content in the "public" folder accessible for every user.
     app.use(express.static(path.join(config.rootFolder, 'public')));
+    app.use(express.static(path.join(config.rootFolder, 'images'))); // working
+
+    // This makes the content in the "images" folder accessible.
+ //   app.use(express.static('images')); // not working
+
 };
+
+
+
 
 
 

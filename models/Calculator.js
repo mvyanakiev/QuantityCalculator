@@ -1,39 +1,34 @@
-function Calculator(leftOperand, operator, rightOperand) {
+function Calculator(quantity, leftOperand, rightOperand, bleed) {
+    this.quantity = quantity;
     this.leftOperand = leftOperand;
-    this.operator = operator;
     this.rightOperand = rightOperand;
+    this.bleed = bleed;
+
+    let printAreaWidth = 305;
+    let printAreaHeight = 470;
+
+    // let chislo = 34;
+
+    // let errorMsg = "Greshka";
 
     this.calculateResult = function () {
         let result = 0;
+        let finalWidth = (this.bleed * 2) + this.leftOperand;
+        let finalHeight = (this.bleed * 2) + this.rightOperand;
 
-        switch (this.operator) {
-            case "+":
-                result = this.leftOperand + this.rightOperand;
-                break;
+        let a1 = Math.trunc(printAreaHeight / finalHeight);
+        let b1 = Math.trunc(printAreaWidth / finalWidth);
+        let c1 = this.quantity / (a1 * b1);
 
-            case "-":
-                result = this.leftOperand - this.rightOperand;
-                break;
+        let a2 = Math.trunc(printAreaHeight / finalWidth);
+        let b2 = Math.trunc(printAreaWidth / finalHeight);
+        let c2 = this.quantity / (a2 * b2);
 
-            case "*":
-                result = this.leftOperand * this.rightOperand;
-                break;
-
-            case "/":
-                result = this.leftOperand / this.rightOperand;
-                break;
-
-            case "sqrt":
-                result = Math.sqrt(this.leftOperand);
-                break;
-
-            case "pow": // вдигане на степен
-                result = Math.pow(this.leftOperand, this.rightOperand);
-                break;
-        }
-
+        result = Math.round(Math.min(c1, c2)) ;
         return result;
-    }
+    };
+
+
 }
 
 module.exports = Calculator;

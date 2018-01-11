@@ -2,33 +2,42 @@
 <html>
 <head>
     <title>Calculator</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+
     <script src="/javascripts/jquery-1.10.2.js"></script>
     <script src="/javascripts/bootstrap.js"></script>
 </head>
 <body>
-    <header>
-        <div class="navbar navbar-default navbar-fixed-top text-uppercase">
-            <div class="container">
-                <div class="navbar-header">
-                    <a href="/" class="navbar-brand">калкулатор за тиражни листа</a>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
+<header>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="/" class="navbar-brand">Quantity calculator for printing houses</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
         </div>
-    </header>
-    {{#if error }}
-        <h2>{{error}}</h2>
-    {{/if}}
-    {{{body}}}
+    </div>
+</header>
+{{#if error }}
+    <h2>{{error}}</h2>
+{{/if}}
+{{{body}}}
 </body>
 <footer>
-    <div class="container modal-footer">
-        <p>&copy; 2018 <a href="https://www.linkedin.com/in/milko-yanakiev/" target="_blank">Milko Yanakiev</a></p>
+    <div class="container text-center">
+        <a href="https://github.com/mvyanakiev/quantityCalculator.git" target="_blank">
+            <img src="/social_logo_github.png" title="This project in GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/milko-yanakiev/" target="_blank">
+            <img src="/logo_linkedin.png" title="Say hello in LinkedIn">
+        </a>
+        <a href="https://trello.com/b/T7q8eulq/quantitycalculator" target="_blank">
+            <img src="/social_round_trello.png" title="Project tracking with Trello">
+        </a>
     </div>
 </footer>
 </html>
