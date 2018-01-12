@@ -1,7 +1,8 @@
 # quantityCalculator
 Quantity calculator for printing houses.
 
-There is no hosting at this time.
+The project is hosted here:
+https://aqueous-depths-68559.herokuapp.com
 
-Tracking:
+Project tracking:
 https://trello.com/b/T7q8eulq/quantitycalculator
