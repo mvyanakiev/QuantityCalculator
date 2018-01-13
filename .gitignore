@@ -5,4 +5,3 @@ node_modules/*
 !node_modules/gitkeep.txt
 views/.DS_Store
 .DS_Store
-.idea/workspace.xml
