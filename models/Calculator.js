@@ -7,10 +7,6 @@ function Calculator(quantity, leftOperand, rightOperand, bleed) {
     let printAreaWidth = 305;
     let printAreaHeight = 470;
 
-    // let chislo = 34;
-
-    // let errorMsg = "Greshka";
-
     this.calculateResult = function () {
         let result = 0;
         let finalWidth = (this.bleed * 2) + this.leftOperand;
@@ -27,8 +23,5 @@ function Calculator(quantity, leftOperand, rightOperand, bleed) {
         result = Math.round(Math.min(c1, c2)) ;
         return result;
     };
-
-
 }
-
 module.exports = Calculator;
